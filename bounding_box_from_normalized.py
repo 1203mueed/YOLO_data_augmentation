@@ -2,11 +2,11 @@ import os
 import cv2
 
 # Folder containing YOLO annotation text files
-yolo_annotations_folder = 'cropped_annotations'
+yolo_annotations_folder = 'path/to/your/yolo_annotation-folder'
 
 # Folder containing images
-images_folder = 'cropped_images'
-output_folder = 'cropped_bounding_box'  # Specify the new output folder
+images_folder = 'path/to/your/image_folder'
+output_folder = 'path/to/your/output_folder'  # Specify the new output folder
 
 # Create the output folder if it doesn't exist
 os.makedirs(output_folder, exist_ok=True)

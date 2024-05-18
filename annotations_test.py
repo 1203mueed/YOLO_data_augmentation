@@ -2,13 +2,13 @@ import os
 import cv2
 
 # Folder containing annotation text files (COCO format)
-annotations_folder = 'test/labels'
+annotations_folder = 'path/to/your/yolo_annotation_folder'
 
 # Folder containing images
-images_folder = 'test/images'
+images_folder = 'path/to/your/image_folder'
 
 # Output folder for annotated images
-output_folder = 'test/result'
+output_folder = 'path/to/your/output_folder'
 
 # Create output folder if it doesn't exist
 os.makedirs(output_folder, exist_ok=True)

@@ -21,7 +21,7 @@ yolo_annotations_folder = 'path/to/your/yolo_labels_folder'
 
 # Folder containing images
 images_folder = 'path/to/your/image_folder'
-output_folder = 'segmented_images'  # Specify the new output folder
+output_folder = 'path/where/you/want/to/save/segmented_images'  # Specify the new output folder
 # Ensure the output directory exists
 os.makedirs(output_folder, exist_ok=True)
 

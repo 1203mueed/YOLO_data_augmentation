@@ -5,10 +5,10 @@ import cv2
 import random
 
 # Paths
-original_images_folder = 'data/images'
-modified_images_folder = 'brightness_contrast/images'
-annotations_folder = 'data/labels'
-modified_annotations_folder = 'brightness_contrast/labels'
+original_images_folder = 'path/to/your/images_folder'
+modified_images_folder = 'path/where/you/want/to/save/modified_images'
+annotations_folder = 'path/to/your/yolo_annotation-folder'
+modified_annotations_folder = 'path/where/you/want/to/save/modified_labels'
 os.makedirs(modified_images_folder, exist_ok=True)
 os.makedirs(modified_annotations_folder, exist_ok=True)
 

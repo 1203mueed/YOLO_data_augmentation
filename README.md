@@ -26,3 +26,5 @@ This repo contains .py files to augment images to use in YOLO format. You can al
 ***If you run the cropped_images.py, it will randomly select 25% of the images, and it will crop the bounding boxes those area is less than 15% of the total image. The difference between small_images.py and cropped_images.py is that cropped_images.py resized the images into 644/644. And  small_images.py keeps the original size.
 
 ***updated_mosaic.py randomly selects four images and combines them.
+
+***If you want to check your annotations, you can use bounding_box_normalized.py. This code will draw the bounding boxes in the image from the annotations

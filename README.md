@@ -37,7 +37,7 @@ This repo contains .py files to augment images to use in YOLO format. You can al
 #### Setup for yolo_plus_sam.py
 Follow the GitHub repo of the Segment Anything Model and setup SAM in your local environment: https://github.com/facebookresearch/segment-anything
 
-Download a model as instructed in the SAM repo. Update the model path and the model type in the yolo_plus_sam.py file.
+Download a model as instructed in the SAM repo. Update the model path and the model type in the yolo_plus_sam.py file. Place the yolo_plus_sam.py in the segment_anything folder. And run the file.
 
 *** If you want to plot the boxes along with the masks, comment out these lines:
 

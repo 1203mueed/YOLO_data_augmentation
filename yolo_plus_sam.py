@@ -5,6 +5,9 @@ import cv2
 import os
 import sys
 from PIL import Image
+import gc  # Garbage Collector interface
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 sys.path.append("..")
 from segment_anything import sam_model_registry, SamPredictor
@@ -13,6 +16,7 @@ sam_checkpoint = "segment-anything/sam_vit_h_4b8939.pth" #your path to .pth
 model_type = "vit_h" #replace with the model type you are using
 
 sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
+sam.to(device)
 
 predictor = SamPredictor(sam)
 
@@ -122,16 +126,9 @@ for yolo_annotation_file in os.listdir(yolo_annotations_folder):
 
         # Clean up the temporary file
         os.remove('temp_output.jpg')
+        
+        # Explicitly delete objects and collect garbage
+            del temp_image, resized_image
+            gc.collect()
 
 print("All images segmented successfully!")
-
-
-# plt.figure(figsize=(10, 10))
-# plt.imshow(image)
-# for mask in masks:
-#     show_mask(mask.cpu().numpy(), plt.gca(), random_color=True)
-# for box in input_boxes:
-#     show_box(box.cpu().numpy(), plt.gca())
-# plt.axis('off')
-# plt.savefig('output.jpg')
-# plt.show()

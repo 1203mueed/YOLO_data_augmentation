@@ -69,10 +69,10 @@ for yolo_annotation_file in os.listdir(yolo_annotations_folder):
         # Process each annotation
         for line in lines:
             parts = line.strip().split()
-            if len(parts) != 6:
+            if len(parts) != 5:
                 continue  # Skip invalid lines
 
-            class_id, center_x, center_y, box_width, box_height, confifence = map(float, parts)
+            class_id, center_x, center_y, box_width, box_height = map(float, parts)
 
             # Convert coordinates back to pixel values
             image_height, image_width, _ = image.shape
